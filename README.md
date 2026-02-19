@@ -13,7 +13,7 @@ The system takes a question about AI research papers and:
 
 We use the **AI Research Papers Dataset** from Kaggle. This dataset contains research papers from ArXiv with titles, summaries, authors, and other metadata.
 
-**Dataset Link:** [AI Research Papers Dataset on Kaggle](https://www.kaggle.com/datasets/datasets/ai-research-papers)
+**Dataset Link:** [AI Research Papers Dataset on Kaggle](https://www.kaggle.com/datasets/yasirabdaali/arxivorg-ai-research-papers-dataset)
 
 **Note:** Download the dataset and place the CSV file in the `data/` folder as `arxiv_ai.csv`
 
@@ -99,7 +99,7 @@ Replace `your_api_key_here` with the actual API key you copied from Groq.
 
 ### Step 6: Download the Dataset
 
-1. Go to the Kaggle dataset page: [AI Research Papers Dataset](https://www.kaggle.com/datasets/datasets/ai-research-papers)
+1. Go to the Kaggle dataset page: [AI Research Papers Dataset](https://www.kaggle.com/datasets/yasirabdaali/arxivorg-ai-research-papers-dataset)
 2. Download the dataset
 3. Extract the CSV file
 4. Place it in the `data/` folder and name it `arxiv_ai.csv`
