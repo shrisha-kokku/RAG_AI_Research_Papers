@@ -3,7 +3,7 @@ import logging
 from groq import Groq
 from dotenv import load_dotenv
 
-# Load environment variables
+#Load environment variables
 load_dotenv()
 
 api_key = os.getenv("GROQ_API_KEY")
@@ -11,13 +11,13 @@ api_key = os.getenv("GROQ_API_KEY")
 if not api_key:
     raise ValueError("GROQ_API_KEY not found. Please set it in the .env file.")
 
-# Initialize Groq client
+#Initialize Groq client
 client = Groq(api_key=api_key)
 
 
 def generate_response(query, retrieved_docs):
     try:
-        # Limit to top 3 chunks to avoid token overflow
+        #Limit to top 3 chunks to avoid token overflow
         retrieved_docs = retrieved_docs[:3]
 
         context = "\n\n".join(retrieved_docs)

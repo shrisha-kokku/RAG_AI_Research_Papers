@@ -16,24 +16,24 @@ logging.basicConfig(
 def main():
     logging.info("RAG system started")
 
-    # Load & preprocess
+    #Load & preprocess
     df = load_dataset("../data/arxiv_ai.csv")
     df = df.head(200)   #Use only first 200 papers for now
     df = clean_and_prepare(df)
     chunks = create_chunks(df)
 
-    # Embeddings
+    #Embeddings
     embeddings = generate_embeddings(chunks)
 
-    # Indexing
+    #Indexing
     faiss_index = create_faiss_index(embeddings)
     bm25_index = create_bm25_index(chunks)
 
-    # User Query
+    #User Query
     query = input("Enter your query: ")
     query_vector = encode_query(query)
 
-    # Hybrid Retrieval
+    #Hybrid Retrieval
     results = hybrid_search(
         query,
         query_vector,
@@ -43,7 +43,7 @@ def main():
         top_k=5
     )
 
-    # Generation
+    #Generation
     answer = generate_response(query, results)
 
     print(answer)
